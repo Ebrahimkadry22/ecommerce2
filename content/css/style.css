@@ -1,0 +1,387 @@
+/* Start globle */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,900;1,600&display=swap');
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color : #03001C;
+    --secden-color:#301E67;
+    --thired-color:#5B8FB9;
+    --white-color:#fff;
+    --font:'Poppins', sans-serif;
+}
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+body {
+    background: var(--primary-color);
+    font-family: var(--font);
+}
+a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+ul {
+    list-style: none;
+}
+input {
+    outline: none;
+    border: none;
+}
+button {
+    outline: none;
+    border: none;
+}
+img {
+    width: 100%;
+}
+section {
+    margin-bottom: 20px;
+}
+/* End globle */
+/* Start header */
+header {
+    background-color: var(--secden-color);
+    margin-bottom: 20px;
+}
+.nav__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--white-color) solid 1px;
+    padding: 10px 0;
+}
+.nav__logo a {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.nav__logo a span {
+    font-size: 2rem;
+    color:var(--thired-color)
+}
+.nav__search {
+    width: 500px;
+    position: relative;
+}
+.nav__search input {
+    width: 100%;
+    padding: 5px ;
+    border-radius: 20px;
+}
+.nav__search i {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--thired-color);
+    border-left: var(--thired-color) solid 1px ;
+    padding: 0 5px;
+    transition: color .3s ease-in-out;
+    cursor: pointer;
+}
+.nav__search i:hover {
+    color:var(--white-color);
+}
+.nav__icon i {
+    color:var(--thired-color);
+    margin-left: 5px;
+    font-size: 17px;
+    transition: color .3s ease-in-out;
+    cursor: pointer;
+}
+.nav__icon i:hover {
+    color:var(--white-color)
+}
+.nav__down {
+    text-align: center;
+    padding: 10px 0;
+}
+.nav__down .items li {
+    display: inline-block;
+}
+.items .item {
+    padding: 15px ;
+    text-transform: uppercase ;
+    position: relative;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+}
+.items .item:hover ,
+.items .active   
+{
+    color :var(--thired-color)
+}
+.item::after {
+    position: absolute;
+    content: "";
+    background-color: var(--thired-color);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0px;
+    height: 0;
+    clip-path: polygon(50% 40% ,0 100% , 100% 100%);
+    bottom: 4px;
+    transition: height .3s ease-in-out ;
+}
+.item:hover::after ,
+.active::after
+{
+    width: 12px;
+    height: 10px;
+}
+/* End header */
+/* Start here */
+.sec__here {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.here__bar {
+    width: 25%;
+    padding: 10px;
+    background-color: var(--white-color);
+    border-radius: 5px;
+}
+.here__bar .here__title {
+    color: var(--white-color);
+    text-transform: uppercase;
+    padding: 10px 10px ;
+    background-color: var(--secden-color);
+    border-radius:10px;
+}
+.here__title i {
+    margin-right: 10px;
+    color: var(--white-color);
+}
+.here__bar .items li {
+    padding: 12px 0px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.here__bar .items li:not(:last-child) {
+    border-bottom: solid var(--thired-color) 1px;
+}
+.here__bar .items li i {
+    margin-right: 15px;
+}
+.here__bar .items li a {
+    color: var(--primary-color);
+    text-transform: capitalize;
+    transition: color .3s ease-in-out;
+}
+.here__bar .items li:hover a ,
+.here__bar .items li:hover .active ,
+.here__bar .items li:hover i ,
+.here__bar .items .active
+ {
+    color:var(--thired-color)
+}
+.here__content {
+    width: 72%;
+    background: linear-gradient(#0000007c , #0000007f ), url(../asstes/image/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 403px;
+    border-radius: 5px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+}
+.con__title p {
+    color: var(--white-color);
+    margin: 8px 0;
+    text-transform: capitalize;
+}
+.con__title h1 {
+    font-size: 2rem;
+    color: var(--white-color);
+}
+.con__title button {
+    padding: 8px 15px;
+    background-color: var(--secden-color);
+    color: var(--white-color);
+    border-radius: 10px;
+    border: 1px solid var(--secden-color);
+    cursor:pointer;
+    transition: background-color .3s ease-in-out;
+}
+.con__title button:hover {
+    background-color: transparent;
+}
+/* End here */
+/* Start producst */
+.products .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.prod__one {
+    width: 25%;
+    padding: 0 0px;
+    background-color: var(--white-color);
+    border-radius:8px;
+}
+.card__prod {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--thired-color);
+}
+.title__card {
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: var(--thired-color);
+}
+.card__prod a {
+    color: var(--secden-color);
+    text-transform: capitalize;
+    transition: color .3s ease-in-out;
+}
+.card__prod a:hover {
+    color: var(--thired-color);
+}
+.prod__one img {
+    border-bottom: 1px solid var(--thired-color);
+}
+.deals__card {
+    padding: 0 10px ;
+}
+.deals__card h6 {
+    font-size: .8rem;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    color: var(--thired-color);
+}
+.deals__card i {
+    color:rgb(255, 231, 47);
+    margin-bottom: 5px;
+}
+.card__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+    color: var(--thired-color);
+}
+.deals__card .card__price p {
+    font-size: .7rem;
+}
+.card__price p:first-child {
+    color: var(--secden-color);
+}
+.prod__more {
+    width: 72%;
+    background-color: var(--white-color);
+    border-radius:8px;
+}
+.cards {
+    display: flex;
+}
+.deals__card p {
+    font-size: .7rem;
+    color: var(--thired-color);
+    margin-bottom: 5px;
+}
+/* End producst */
+/* Start offer */
+.offer {
+    margin-bottom: 20px;
+}
+.offer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.new__offer {
+    width: 25% ;
+    background-color: var(--white-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.card__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--thired-color);
+}
+.card__item img {
+    width: 45%;
+}
+.card__item .deals__card i {
+    font-size: .8rem;   
+}
+.offer__more {
+    width: 72%;
+}
+.offer__more .here__content {
+    width: 100%;
+    background: linear-gradient(#0000007c , #0000007c) , url(../asstes/image/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 230px;
+    justify-content:center ;
+    margin-bottom: 15px;
+}
+.offer__more .here__content .con__title {
+    text-align: center;
+}
+.offer__more .cards {
+    background-color: var(--white-color);
+    border-radius:8px;
+    overflow: hidden;
+}
+/* End offer */
+/* Start footer */
+footer {
+    background-color: var(--secden-color);
+}
+.container .lists {
+    display: flex;
+    justify-content: space-between;
+}
+.list {
+    width: 25%;
+    padding: 10px 0;
+}
+.list__title {
+    padding: 10px 0;
+    font-size: .9rem;
+    color: var(--thired-color);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.list__title h3 span {
+    color: var(--white-color);
+    font-size: 1.5rem;
+}
+.list p {
+    text-transform: capitalize;
+    font-size:.9rem;
+    color:var(--thired-color);
+    margin-bottom: 10px;
+}
+.list a {
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 10px;
+    transition: color .3s ease-in-out;
+}
+.list a:hover {
+    color: var(--thired-color);
+}
+.list .item li {
+    padding: 4px 0;
+}
+.list .image__pey img {
+    width: 20%;
+}
+.list .image__pey {
+    display: flex;
+    justify-content: space-between;
+}
+/* end footer */
